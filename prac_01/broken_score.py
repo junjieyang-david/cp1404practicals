@@ -7,13 +7,13 @@ HIGHEST_SCORES = 100
 EXCELLENT_SCORES = 90
 PASS_SCORES = 50
 score = float(input("Enter score:"))
-if LOWEST_SCORES <= score <= HIGHEST_SCORES:
+if LOWEST_SCORES > score or score > HIGHEST_SCORES:
+    message = "invalid value"
+else:
     if score >= EXCELLENT_SCORES:
         message = "excellent"
     elif score >= PASS_SCORES:
         message = "pass"
     else:
         message = "bad"
-else:
-    message = "invalid value"
 print(message)
